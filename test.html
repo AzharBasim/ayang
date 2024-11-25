@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun Syifa Wulan Hermasari!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Nobile:400italic,700italic');
+    @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #E5E5E5;
+      background-image: url('bday.jpg');
+      background-size: cover;
+      font-family: 'Nobile', sans-serif;
+      color: #FFF;
+    }
+
+    #card {
+      width: 90%;
+      max-width: 860px;
+      margin: 0 auto;
+      perspective: 5000px;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    #card h1 {
+      font-size: 2em;
+      text-align: center;
+      text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15),
+                   1px 1px 0 rgba(255, 200, 200, 255),
+                   2px 2px 0 rgba(255, 150, 150, 255),
+                   3px 3px 0 rgba(255, 125, 125, 255);
+    }
+
+    #card-inside {
+      font-size: 1.1em;
+      line-height: 1.6;
+      background: #FFEFEF;
+      padding: 20px;
+      box-shadow: inset 2px 0 1px rgba(0, 0, 0, 0.05);
+      transform: rotateY(180deg);
+      backface-visibility: hidden;
+      transition: transform 1s ease;
+    }
+
+    #card-front {
+      background: linear-gradient(135deg, #FF5555, #FF7777);
+      color: #FFF;
+      text-align: center;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.25);
+      transition: transform 1s ease;
+      transform: rotateY(0deg);
+      backface-visibility: hidden;
+    }
+
+    #card-front button {
+      background: #F44;
+      color: #FFF;
+      font-size: 1.5em;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+      transition: background 0.3s;
+    }
+
+    #card-front button:hover {
+      background: #F22;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+      margin-top: 20px;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      #card h1 {
+        font-size: 1.5em;
+      }
+
+      #card-inside {
+        font-size: 1em;
+      }
+
+      #card-front button {
+        font-size: 1.2em;
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #card h1 {
+        font-size: 1.2em;
+      }
+
+      #card-front {
+        padding: 20px;
+      }
+
+      #card-front button {
+        font-size: 1em;
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="card">
+    <div id="card-inside">
+      <p>To Syifa Wulan</p>
+      <p>HBD Anak Rajin semoga panjang umur, sehat selalu, diberkahi umurnya, dipermudah dalam mendapat rezekinya dan dipermudah dalam segalanya. Semoga semakin CANTIK, SHOLEHAH, semakin pinter dan Lucu.</p>
+      <p>"You are my sweetest gift from God, because your smile always welcoming me when we meet. Anyway, if you feel down or lonely, remember! I'll always have your back, and trying to do my best for ya!"</p>
+      <center><h4>With Love</h4></center>
+      <p class="signed">Azhar Basim</p>
+    </div>
+
+    <div id="card-front">
+      <h1>Selamat Ulang Tahun Caca!</h1>
+      <button id="open">&gt;</button>
+    </div>
+  </div>
+
+  <div style="visibility: hidden;">
+    <embed src="bday.mp3" autostart="true" loop="true">
+  </div>
+
+  <footer>&copy;Copyright Azhar Basim. Tidak Diperkenankan Mengedit dan mempublikasikan tanpa izin</footer>
+
+  <script>
+    (function() {
+      function $(id) {
+        return document.getElementById(id);
+      }
+
+      var card = $('card'),
+          openB = $('open');
+
+      openB.addEventListener('click', function() {
+        card.style.transform = 'rotateY(180deg)';
+      });
+    })();
+  </script>
+
+</body>
+</html>
